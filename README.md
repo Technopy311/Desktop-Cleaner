@@ -20,8 +20,14 @@ a few lines of code,
 
 **First** you need to modify the lines from 14 to 19.
 that is to setup where the files should go.
-**Second** you need to modify the lines from 24 to 58
+
+**Second** you need to modify the lines from 23 to 57
 in these lines, are the lists of extensions to compare
 with the file's extension.
 
-then you
+**And Third** you only need to call the 
+Organinzing function and pass a 
+parameters the Extension list
+and the Destination folder.
+
+***And that's all***

@@ -2,10 +2,11 @@
 
 #importing all stuff
 from os import listdir, system, path, getcwd
-from pynotifier import Notification
+
 
 
 # directory to be checked
+
 base_folder = "/home/technopy/Descargas/"
 
 
@@ -57,11 +58,7 @@ Book_ext = [
 ]
 
 
-
-print("Organizing")
-
-#listing the base folder
-
+# listing the base folder
 files = listdir(base_folder)
 
 
@@ -78,20 +75,12 @@ def Organizing(Extension_list, destination_folder):
             if ext in file:
                 system("mv " + source + " " + destination_folder)
                 text = (file + " succesfully organised ")
-                Notification(
-                    title="File succesfully moved",
-                    description=text,
-                    icon_path=None,
-                    duration=2,
-                    urgency=Notification.URGENCY_NORMAL,
+                print(text)
 
-                ).send()
+Organizing(Document_ext, documents_folder)
+Organizing(Programming_ext, programming_folder)
+Organizing(Audio_ext, music_folder)
+Organizing(Video_ext, videos_folder)
+Organizing(Image_ext, images_folder)
+Organizing(Book_ext, books_folder)
 
-if __name__ == "__main__":
-    
-    Organizing(Document_ext, documents_folder)
-    Organizing(Programming_ext, programming_folder)
-    Organizing(Audio_ext, music_folder)
-    Organizing(Video_ext, videos_folder)
-    Organizing(Image_ext, images_folder)
-    Organizing(Book_ext, books_folder)
