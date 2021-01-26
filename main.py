@@ -64,89 +64,34 @@ print("Organizing")
 
 files = listdir(base_folder)
 
-for file in files:
-    file = ("'" + file + "'")
 
-    source = (base_folder + file)
-    #print("File: " + file)
-    #print("Source: " + source)
+def Organizing(Extension_list, destination_folder):
+    for file in files:
+        
+        file = ("'" + file + "'")
+        source = (base_folder + file)
+        
+        #print("File: " + file)
+        #print("Source: " + source)
 
+        for ext in Extension_list:
+            if ext in file:
+                system("mv " + source + " " + destination_folder)
+                text = (file + " succesfully organised ")
+                Notification(
+                    title="File succesfully moved",
+                    description=text,
+                    icon_path=None,
+                    duration=2,
+                    urgency=Notification.URGENCY_NORMAL,
+
+                ).send()
+
+if __name__ == "__main__":
     
-    for ext in Document_ext:
-        if ext in file:
-            system("mv " + source + " " + documents_folder)
-            text = ("Moved " + file + " into Documents folder")
-            Notification(
-                title="Desktop succesfully organized",
-                description=text,
-                icon_path=None,
-                duration=2,
-                urgency=Notification.URGENCY_NORMAL,
-
-            ).send()
-            
-    for ext in Programming_ext:
-        if ext in file:
-            system("mv " + source + " " + programming_folder)
-            text = ("Moved " + file + " into programming folder")
-            Notification(
-                title="Desktop succesfully organized",
-                description=text,
-                icon_path=None,
-                duration=2,
-                urgency=Notification.URGENCY_NORMAL,
-
-            ).send()
-    
-    for ext in Audio_ext:
-        if ext in file:
-            system("mv " + source + " " + music_folder)
-            text = ("Moved " + file + " into Music folder")
-            Notification(
-                title="Desktop succesfully organized",
-                description=text,
-                icon_path=None,
-                duration=2,
-                urgency=Notification.URGENCY_NORMAL,
-
-            ).send()
-
-    for ext in Video_ext:
-        if ext in file:
-            system("mv " + source + " " + videos_folder)
-            text = ("Moved " + file + " into Videos")
-            Notification(
-                title="Desktop succesfully organized",
-                description=text,
-                icon_path=None,
-                duration=2,
-                urgency=Notification.URGENCY_NORMAL,
-
-            ).send()
-
-    for ext in Image_ext:
-        if ext in file:
-            system("mv " + source + " " + images_folder)
-            text = ("Moved " + file + " into Images folder")
-            Notification(
-                title="Desktop succesfully organized",
-                description=text,
-                icon_path=None,
-                duration=2,
-                urgency=Notification.URGENCY_NORMAL,
-
-            ).send()
-
-    for ext in Book_ext:
-        if ext in file:
-            system("mv " + source + " " + books_folder)
-            text = ("Moved " + file + " into Books folder")
-            Notification(
-                title="Desktop succesfully organized",
-                description=text,
-                icon_path=None,
-                duration=2,
-                urgency=Notification.URGENCY_NORMAL,
-
-            ).send()
-    
+    Organizing(Document_ext, documents_folder)
+    Organizing(Programming_ext, programming_folder)
+    Organizing(Audio_ext, music_folder)
+    Organizing(Video_ext, videos_folder)
+    Organizing(Image_ext, images_folder)
+    Organizing(Book_ext, books_folder)
