@@ -1,14 +1,16 @@
 #!/usr/bin/python3
 
+#importing all stuff
 from os import listdir, system, path, getcwd
 from pynotifier import Notification
-#from shutil import move
 
 
-#directory to be watched
+# directory to be checked
 base_folder = "/home/technopy/Descargas/"
 
+
 #directories to move stuff
+
 images_folder = "/home/technopy/Imágenes/"
 music_folder = "/home/technopy/Música/"
 videos_folder = "/home/technopy/Videos/"
