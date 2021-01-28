@@ -1,5 +1,12 @@
 #!/usr/bin/python3
 
+'''
+Copyright, this script is owned by @Technopy, it can 
+be modified, but always giving credit to it's owner
+
+GitHub Profile: https://github.com/Technopy311
+'''
+
 #importing all stuff
 from os import listdir, system, path, getcwd
 
@@ -44,7 +51,7 @@ Audio_ext = [
 ]
 
 Video_ext = [
-    '.avi', '.mp4', '.mov', '.flv', '.mpg', '.m4v'
+    '.avi', '.mp4', '.mov', '.flv', '.mpg', '.m4v', 'mkv'
 ]
 
 Image_ext = [

@@ -1,5 +1,12 @@
 # This is an Desktop Cleaner script
 
+
+Copyright, this script is owned by @Technopy, it can 
+be modified, but always giving credit to it's owner
+
+[GitHub Profile: (https://github.com/Technopy311)]
+
+
 ## Disclaimer
 This script has been made with python3 (python 3.8)
 
