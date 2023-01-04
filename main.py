@@ -11,20 +11,21 @@ be modified, but always giving credit to it's owner
 from os import listdir, system, path, getcwd
 
 
+username = "xmenm"
 
-# directory to be checked
+# directory to be checked for files
 
-base_folder = "/home/technopy/Descargas/"
+base_folder = "/home/"+ username +"/Downloads/"
 
 
-#directories to move stuff
+# directories to move stuff
 
-images_folder = "/home/technopy/Imágenes/"
-music_folder = "/home/technopy/Música/"
-videos_folder = "/home/technopy/Videos/"
-documents_folder = "/home/technopy/Documentos/"
-books_folder = "/home/technopy/'Biblioteca de calibre'/"
-programming_folder = "/home/technopy/Documentos/programming/"
+images_folder = "/home/"+ username +"/Images/"
+music_folder = "/home/"+ username +"/Music/"
+videos_folder = "/home/"+ username +"/Videos/"
+documents_folder = "/home/"+ username +"/Documents/"
+books_folder = "/home/"+ username +"/Documents/Books/"
+programming_folder = "/home/"+ username +"/Documents/programming/"
 
 
 #Defining extensions to check
